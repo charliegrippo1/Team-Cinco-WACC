@@ -1,10 +1,8 @@
-# <Team name>: WACC for <Client firm>
-
-> **CEO:** fill in every `<...>` below, then commit this file to `main`. It's the plan everyone (and every agent) works from.
+# Team Cinco: WACC for Roblox Corp
 
 ## The question
 
-What is <Client firm> (<TICKER>)'s weighted average cost of capital, and what does it mean for the hurdle rate on its new projects?
+What is Roblox Corp (RBLX)'s weighted average cost of capital, and what does it mean for the hurdle rate on its new projects?
 
 ## The output (the one thing we ship)
 
@@ -29,10 +27,10 @@ A **WACC card**: one page, in our app, showing the WACC and every input behind i
 
 | Role | Name | GitHub username | Branch | Owns |
 |---|---|---|---|---|
-| CEO | <name> | <username> | `main` (reviews and merges) | this README, reviewing every pull request |
-| Developer | <name> | <username> | `dev-wacc` | `code/wacc.py` |
-| Product manager | <name> | <username> | `pm-app` | `app.py` |
-| Analyst | <name> | <username> | `analyst-inputs` | `inputs/assumptions.csv` (every number has a source) |
+| CEO | Charlie Grippo | charliegrippo1 | `main` (reviews and merges) | this README, reviewing every pull request |
+| Developer | Carter Loi | carterloi | `dev-wacc` | `code/wacc.py` |
+| Product manager | Gunnar Krein | gunnarkrein12 | `pm-app` | `app.py` |
+| Analyst | Ryan Stiles | rstiles315 | `analyst-inputs` | `inputs/assumptions.csv` (every number has a source) |
 
 _Team of 3? The CEO is also the analyst._
 
