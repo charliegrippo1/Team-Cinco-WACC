@@ -40,21 +40,27 @@ st.caption(
 )
 
 st.subheader('Leverage scenario')
-scenario_debt_weight = st.slider(
+scenario_debt_pct = st.slider(
     'Debt as a share of total capital',
-    min_value=0.0,
-    max_value=1.0,
-    value=float(card['w_d']),
-    step=0.01,
-    format='%.0f%%',
+    min_value=0,
+    max_value=100,
+    value=int(round(card['w_d'] * 100)),
+    step=1,
+    format='%d%%',
 )
+scenario_debt_weight = scenario_debt_pct / 100
 scenario_equity_weight = 1 - scenario_debt_weight
 scenario_wacc = (
     scenario_equity_weight * card['cost_of_equity']
     + scenario_debt_weight * card['rd'] * (1 - card['tax'])
 )
 scenario_change = scenario_wacc - card['wacc']
-st.metric('Scenario WACC', f'{scenario_wacc:.2%}', f'{scenario_change:+.2%} vs. current')
+st.metric(
+    'Scenario WACC',
+    f'{scenario_wacc:.2%}',
+    f'{scenario_change:+.2%} vs. current',
+    delta_color='inverse',  # a higher hurdle rate is bad news
+)
 st.caption(
     'Illustrative: changes only the debt/equity mix. Beta, borrowing cost, tax rate, '
     'and market assumptions stay fixed; financing costs may change with leverage.'
