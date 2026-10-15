@@ -1,7 +1,7 @@
 item,value,source
-rf,0.04,"TODO (analyst): e.g. the 10-year Treasury yield on FRED (DGS10) as of a date you name"
-mrp,0.05,"TODO (analyst): market risk premium; say where it comes from and why"
-rd,0.055,"TODO (analyst): pre-tax cost of debt; e.g. yield on the firm's bonds or interest expense / total debt"
-tax,0.21,"TODO (analyst): tax rate; statutory or effective (income tax expense / pretax income)"
-w_e,0.70,"TODO (analyst): market cap / (market cap + total debt)"
-w_d,0.30,"TODO (analyst): total debt / (market cap + total debt)"
+rf,0.0521,FRED DGS10: 5.21% on 2026-10-13. Latest observation available when retrieved 2026-10-15. https://fred.stlouisfed.org/series/DGS10
+mrp,0.05,Analyst-selected long-run US equity premium of 5%. Damodaran reports a 5.00% average implied ERP for 2016-2025. A long-run assumption rather than a current market quote. https://pages.stern.nyu.edu/~adamodar/pdfiles/blog/DataUpdate2for2026.pdf
+rd,0.0624,"Estimated marginal borrowing cost: 5.21% Treasury + 1.03% BBB index OAS, both 2026-10-13. Broad rating-bucket proxy, not an RBLX bond yield. S&P upgraded Roblox to BBB- on 2025-08-13. https://fred.stlouisfed.org/series/DGS10 ; https://fred.stlouisfed.org/series/BAMLC0A4CBBB ; https://www.spglobal.com/ratings/en/regulatory/article/-/view/type/HTML/id/3423958"
+tax,0.21,Normalized long-run US federal statutory rate. Excludes state taxes. Roblox losses and full deferred-tax valuation allowance mean the immediate interest tax shield may be zero; compare tax=0. https://www.irs.gov/publications/p542 ; https://www.sec.gov/Archives/edgar/data/1315098/000162828026051082/rblx-20260630.htm# (Note 13)
+w_e,0.9724528950231944,"E/(E+D). E=$33.96bn market cap at 2026-10-14 close. D=$0.962bn: $0.947bn notes fair value plus $0.015bn external JV principal proxy at 2026-06-30. Debt uses latest filed values, not an October quote. Excludes operating leases and does not net cash. https://stockanalysis.com/stocks/rblx/market-cap/ ; https://www.sec.gov/Archives/edgar/data/1315098/000162828026051082/rblx-20260630.htm (Notes 7 and 12)"
+w_d,0.027547105,"D/(E+D), using the same equity and debt definitions and dates as w_e: 0.962/(33.96+0.962). https://stockanalysis.com/stocks/rblx/market-cap/ ; https://www.sec.gov/Archives/edgar/data/1315098/000162828026051082/rblx-20260630.htm (Notes 7 and 12)"
